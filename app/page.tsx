@@ -1,65 +1,67 @@
-import Image from "next/image";
+import SplitSection from "@/components/common/SplitSection";
+import StatsSection from "@/components/common/StatsSection";
+import ContactForm from "@/components/common/ContactForm";
 
 export default function Home() {
+  const sharedBg = "/images/refinery.png";
+  const sharedBg2 = "/images/lifestyle.png";
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="flex flex-col flex-1 pt-10">
+      {/* About Section */}
+      <SplitSection
+        id="about"
+        heading="Connecting Oil Refineries with End-Use Buyers"
+        subheading="Your Trusted Partner in Oil and Gas Exploration Services"
+        description="At US Oil Brokers, we specialize in uniting oil refineries with buyers for end-use distribution. With a focus on commodities brokerage, crude oil trading, and oil farming, we ensure seamless transactions for all parties involved."
+        ctaText="Explore Our Services"
+        bgImageSrc={sharedBg}
+      />
+
+      {/* Services Section (Inverted Content) */}
+      <SplitSection
+        heading="Advanced Solutions for Global Energy Logistics"
+        subheading="Strategic Exploration and Distribution Excellence"
+        description="Our comprehensive network and industry expertise allow us to navigate complex energy markets with precision. From offshore exploration support to large-scale refinery logistics, we provide the backbone for efficient energy flow worldwide."
+        ctaText="Learn More About Us"
+        bgImageSrc={sharedBg}
+        reverse={true}
+      />
+
+      {/* Stats Section */}
+      <StatsSection />
+      <SplitSection
+        heading="Oil Farming Expertise"
+        description="Our mastery in oil farming techniques ensures a sustainable and reliable supply of oil products, meeting the needs of our diverse clientele."
+        subheading="Industry Leadership"
+        bgImageSrc={sharedBg2}
+      />
+
+      {/* Services Section (Inverted Content) */}
+      <SplitSection
+        heading="Commodities Brokerage"
+        description="We facilitate seamless transactions between oil refineries and end-use buyers, ensuring fair deals and efficient distribution channels."
+        subheading="Crude Oil Trading"
+        bgImageSrc={sharedBg2}
+        reverse={true}
+      />
+
+      {/* Contact Section */}
+      <SplitSection
+        id="contact"
+        heading="Get in Touch"
+        subheading="Connect with our global network of energy experts"
+        bgImageSrc={sharedBg2}
+      >
+        <ContactForm />
+      </SplitSection>
+
+      {/* Footer */}
+      <section className="py-20 bg-white items-center justify-center flex">
+        <div className="text-center px-4">
+          <p className="text-gray-400 text-sm">©{new Date().getFullYear()} Bernadette Energy. All rights reserved.</p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
