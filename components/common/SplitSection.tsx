@@ -51,7 +51,7 @@ const SplitSection = ({
             )}
 
             {ctaText && (
-              <button className="bg-[#E5C48B] hover:bg-[#D4B37A] text-gray-900 px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md">
+              <button className="bg-violet-600 cursor-pointer hover:bg-violet-700 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md">
                 {ctaText}
               </button>
             )}

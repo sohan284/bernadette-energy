@@ -1,6 +1,7 @@
 import SplitSection from "@/components/common/SplitSection";
 import StatsSection from "@/components/common/StatsSection";
 import ContactForm from "@/components/common/ContactForm";
+import MapSection from "@/components/common/MapSection";
 
 export default function Home() {
   const sharedBg = "/images/refinery.png";
@@ -55,6 +56,9 @@ export default function Home() {
       >
         <ContactForm />
       </SplitSection>
+
+      {/* Map Section */}
+      <MapSection />
 
       {/* Footer */}
       <section className="py-20 bg-white items-center justify-center flex">
