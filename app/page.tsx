@@ -12,7 +12,6 @@ export default function Home() {
     <main className="flex flex-col flex-1 pt-10">
       {/* About Section */}
       <SplitSection
-        id="about"
         heading="Connecting Oil Refineries with End-Use Buyers"
         subheading="Your Trusted Partner in Oil and Gas Exploration Services"
         description="At US Oil Brokers, we specialize in uniting oil refineries with buyers for end-use distribution. With a focus on commodities brokerage, crude oil trading, and oil farming, we ensure seamless transactions for all parties involved."
@@ -22,6 +21,7 @@ export default function Home() {
 
       {/* Services Section (Inverted Content) */}
       <SplitSection
+
         heading="Advanced Solutions for Global Energy Logistics"
         subheading="Strategic Exploration and Distribution Excellence"
         description="Our comprehensive network and industry expertise allow us to navigate complex energy markets with precision. From offshore exploration support to large-scale refinery logistics, we provide the backbone for efficient energy flow worldwide."
@@ -33,6 +33,7 @@ export default function Home() {
       {/* Stats Section */}
       <StatsSection />
       <SplitSection
+        id="about"
         heading="Oil Farming Expertise"
         description="Our mastery in oil farming techniques ensures a sustainable and reliable supply of oil products, meeting the needs of our diverse clientele."
         subheading="Industry Leadership"
