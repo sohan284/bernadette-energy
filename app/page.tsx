@@ -2,9 +2,10 @@ import SplitSection from "@/components/common/SplitSection";
 import StatsSection from "@/components/common/StatsSection";
 import ContactForm from "@/components/common/ContactForm";
 import MapSection from "@/components/common/MapSection";
+import Footer from "@/components/common/Footer";
 
 export default function Home() {
-  const sharedBg = "/images/refinery.png";
+  const sharedBg = "/images/premium_refinery.png";
   const sharedBg2 = "/images/lifestyle.png";
 
   return (
@@ -61,11 +62,7 @@ export default function Home() {
       <MapSection />
 
       {/* Footer */}
-      <section className="py-20 bg-white items-center justify-center flex">
-        <div className="text-center px-4">
-          <p className="text-gray-400 text-sm">©{new Date().getFullYear()} Bernadette Energy. All rights reserved.</p>
-        </div>
-      </section>
+      <Footer />
     </main>
   );
 }
