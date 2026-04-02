@@ -35,10 +35,7 @@ const Footer = () => {
                                 key={item.name}
                                 href={item.href}
                                 onClick={(e) => handleScroll(e, item.href)}
-                                className={`text-sm font-medium transition-all px-4 py-2 rounded-full ${item.active
-                                    ? "bg-gray-100 text-gray-900 shadow-sm"
-                                    : "text-gray-500 hover:text-violet-600"
-                                    }`}
+                                className={`text-sm font-medium transition-all px-4 py-2 rounded-full text-gray-500 hover:text-violet-600`}
                             >
                                 {item.name}
                             </a>
