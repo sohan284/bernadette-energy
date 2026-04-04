@@ -4,6 +4,7 @@ interface SplitSectionProps {
   subheading: string;
   description?: string;
   ctaText?: string;
+  ctaHref?: string;
   bgImageSrc: string;
   reverse?: boolean;
   children?: React.ReactNode;
@@ -15,6 +16,7 @@ const SplitSection = ({
   subheading,
   description,
   ctaText,
+  ctaHref,
   bgImageSrc,
   reverse = false,
   children,
@@ -51,9 +53,34 @@ const SplitSection = ({
             )}
 
             {ctaText && (
-              <button className="bg-violet-600 cursor-pointer hover:bg-violet-700 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md">
-                {ctaText}
-              </button>
+              ctaHref ? (
+                <a 
+                  href={ctaHref}
+                  className="inline-flex items-center gap-2 group bg-violet-600 cursor-pointer hover:bg-violet-700 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md text-center"
+                >
+                  {ctaText}
+                  <svg 
+                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              ) : (
+                <button className="inline-flex items-center gap-2 group bg-violet-600 cursor-pointer hover:bg-violet-700 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md">
+                  {ctaText}
+                  <svg 
+                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              )
             )}
 
             {children}
