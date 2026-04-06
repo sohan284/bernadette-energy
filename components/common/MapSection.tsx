@@ -20,20 +20,11 @@ const MapSection = () => {
 
                 <div className="bg-white shadow-blue-900/5 overflow-hidden border border-gray-100 group">
                     <div className="aspect-video md:aspect-3/1 w-full  overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            loading="lazy"
-                            allowFullScreen
-                            referrerPolicy="no-referrer-when-downgrade"
-                            src={fallbackMapUrl}
-                            title="Bernadette Energy Office Location"
-                            className="w-full h-full"
-                        ></iframe>
-
-                        {/* Overlay to catch clicks and direct to Google Maps if needed, or just for visual polish */}
-                        <div className="absolute inset-0 pointer-events-none bg-linear-to-t from-black/20 to-transparent"></div>
+                        <img
+                            src="/images/wheat_field_sunset.png"
+                            alt="Beautiful wheat field at sunset"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
 
