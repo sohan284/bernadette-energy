@@ -73,7 +73,7 @@ const ContactForm = () => {
           name="subject"
           type="text"
           id="subject"
-          placeholder="How can we help?"
+          placeholder="E.g., Partnership Inquiry"
           className="w-full bg-transparent border-b border-gray-200 py-3 focus:border-violet-600 outline-none transition-all duration-300 text-gray-800 placeholder:text-gray-300 focus:placeholder:text-gray-200"
         />
       </div>
@@ -101,7 +101,7 @@ const ContactForm = () => {
           name="message"
           id="message"
           rows={4}
-          placeholder="Tell us more about your needs..."
+          placeholder="Message details"
           className="w-full bg-transparent border-b border-gray-200 py-3 focus:border-violet-600 outline-none transition-all duration-300 text-gray-800 placeholder:text-gray-300 focus:placeholder:text-gray-200 resize-none"
         ></textarea>
       </div>
