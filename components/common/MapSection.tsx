@@ -19,7 +19,7 @@ const MapSection = () => {
 
 
                 <div className="bg-white shadow-blue-900/5 overflow-hidden border border-gray-100 group">
-                    <div className="aspect-video md:aspect-3/1 w-full  overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
+                    <div className="aspect-video md:aspect-3/1 w-full overflow-hidden relative">
                         <img
                             src="/images/wheat_field_sunset.png"
                             alt="Beautiful wheat field at sunset"
