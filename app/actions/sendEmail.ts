@@ -3,7 +3,7 @@
 import { Resend } from "resend";
 
 // NOTE: It is recommended to move this API key to .env.local
-const resend = new Resend("re_c7ydXccn_CQGPmo2Q1BDnEZFHMispnpuT");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface SendEmailResponse {
   success: boolean;
@@ -12,7 +12,7 @@ interface SendEmailResponse {
 
 export async function sendEmail(formData: FormData): Promise<SendEmailResponse> {
   const email = formData.get("email") as string;
-  
+
   // Contact form fields
   const subject = formData.get("subject") as string;
   const message = formData.get("message") as string;
@@ -22,11 +22,11 @@ export async function sendEmail(formData: FormData): Promise<SendEmailResponse> 
   const lastName = formData.get("lastName") as string;
   const country = formData.get("country") as string;
   const phone = formData.get("phone") as string;
-  
+
   const isLeadForm = !!firstName;
 
-  const mailSubject = isLeadForm 
-    ? `New Lead Request from ${firstName} ${lastName}` 
+  const mailSubject = isLeadForm
+    ? `New Lead Request from ${firstName} ${lastName}`
     : `New Message: ${subject}`;
 
   const htmlContent = isLeadForm ? `
