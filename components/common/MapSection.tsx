@@ -15,14 +15,14 @@ const MapSection = () => {
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50/50 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-50/50 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl pointer-events-none"></div>
 
-            <div className="max-w-[1600px] mx-auto relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
 
                 <div className="bg-white shadow-blue-900/5 overflow-hidden border border-gray-100 group">
                     <div className="aspect-video md:aspect-3/1 w-full overflow-hidden relative">
                         <img
-                            src="/images/wheat_field_sunset.png"
-                            alt="Beautiful wheat field at sunset"
+                            src="/images/long_oil_pipeline.png"
+                            alt="Long oil pipeline infrastructure"
                             className="w-full h-full object-cover"
                         />
                     </div>

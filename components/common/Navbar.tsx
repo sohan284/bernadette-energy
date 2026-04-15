@@ -46,18 +46,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-1">
-          {navItems.map((item) => {
-            return (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleScroll(e, item.href)}
-                className="px-5 py-2 rounded-full text-sm font-medium transition-all text-white/90 hover:bg-white/10 hover:text-white"
-              >
-                {item.name}
-              </a>
-            );
-          })}
+          {/* Internal navigation links removed to maintain focus on the lead magnet */}
         </div>
       </div>
     </nav>

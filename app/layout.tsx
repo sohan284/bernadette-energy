@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 };
 
 import Navbar from "@/components/common/Navbar";
+import { Toaster } from "sonner";
 
 export default function RootLayout({
   children,
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className="min-h-full  flex flex-col ">
         <Navbar />
         {children}
+        <Toaster position="bottom-right" richColors />
       </body>
     </html>
   );
