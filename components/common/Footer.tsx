@@ -28,21 +28,10 @@ const Footer = () => {
         <footer className="bg-white pt-16 pb-8 border-t border-gray-100">
             <div className="max-w-[1600px] mx-auto px-8">
                 {/* Row 1: Navigation and Copyright */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
-                    <div className="flex items-center gap-6">
-                        {navItems.map((item) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                onClick={(e) => handleScroll(e, item.href)}
-                                className={`text-sm font-medium transition-all px-4 py-2 rounded-full text-gray-500 hover:text-violet-600`}
-                            >
-                                {item.name}
-                            </a>
-                        ))}
-                    </div>
+                {/* Row 1: Copyright notice centered after removing redundant nav links */}
+                <div className="flex flex-col items-center justify-center gap-4 mb-8 text-center">
                     <p className="text-gray-400 text-sm tracking-tight">
-                        &copy;Copyright. All rights reserved.
+                        &copy; {new Date().getFullYear()} Bernadette Energy. All rights reserved.
                     </p>
                 </div>
 
